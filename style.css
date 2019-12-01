@@ -1,0 +1,164 @@
+body {
+  font-family: 'Nunito', sans-serif;
+}
+
+#header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 70%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.card {
+  box-sizing: border-box;
+  flex: 7% 1 1;
+  margin: 3px;
+  height: 8vw;
+  
+  border: 2px solid #e0e0e0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+  border-radius: 3px;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  font-size: 10px;
+  padding-right: 6px;
+}
+
+.card p:first-child {
+  align-self: flex-end;
+}
+
+.card p:last-child {
+  text-align: right;
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://i.imgur.com/X5nacsZ.png');
+  background-size: cover;
+  border: none;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+.wrong {
+  animation: wrongAnimation 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #f1c232;
+  }
+}
+
+/** Game finished **/
+#cards.completed .card {
+  background-color: #e0e0e0;
+}
+
+#cards.completed .card img,
+#cards.completed .card p {
+  visibility: hidden;
+}
+
+#header.completed {
+  align-items: center
+}
+
+#header.completed .title {
+  width: 40%;
+  justify-content: center;
+}
+
+#header.completed > *:not(:first-child) {
+  position: absolute
+}
+
+#header.completed > p.complete {
+  font-size: 3em;
+  color: #758d9a;
+  font-weight: 700;
+  margin-top: 180px;
+}
+
+#header.completed > h2.score {
+  font-size: 2em;
+  color: #f2a94a;
+  margin-top: 280px;
+}
+
+#header.completed > p.tried {
+  color: #6f6f6f;
+  margin-top: 320px;
+}
+
+
+@media (max-width: 767px) {
+  #header {
+    width: 100%;
+  }
+  
+  #header .title {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #header .title img {
+    max-height: 3em;
+    align-self: center;
+  }
+  
+  #cards {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 20% 0 1;
+    height: 140px;
+  }
+}
