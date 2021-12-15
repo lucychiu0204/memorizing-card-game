@@ -9,10 +9,10 @@ const GAME_STATE = {
 
 // Symbols = ['Diamond', 'Heart', 'Spade', 'Club'];
 const Symbols = [
-  'https://image.flaticon.com/icons/svg/105/105219.svg',
-  'https://image.flaticon.com/icons/svg/105/105212.svg',
-  'https://image.flaticon.com/icons/svg/105/105220.svg',
-  'https://image.flaticon.com/icons/svg/105/105223.svg'
+  'https://assets-lighthouse.alphacamp.co/uploads/image/file/17991/diamonds.png',
+  'https://assets-lighthouse.alphacamp.co/uploads/image/file/17992/heart.png',
+  'https://assets-lighthouse.alphacamp.co/uploads/image/file/17989/__.png',
+  'https://assets-lighthouse.alphacamp.co/uploads/image/file/17988/__.png'
 ]
 
 const view = {
